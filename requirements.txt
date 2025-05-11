@@ -1,0 +1,4 @@
+PyQt5>=5.15.0
+PyQtWebEngine>=5.15.0
+yt-dlp>=2023.0.0
+pytube>=12.0.0
