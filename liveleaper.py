@@ -65,18 +65,19 @@ class Downloader(QThread):
                 # ダウンロードしたファイルを自動的に確認する
                 downloaded_files = [f for f in os.listdir(self.save_path) if f.startswith(title)]
 
-                if not downloaded_files:
-                    self.error.emit(f"ファイルが見つかりません: {title}")
-                    return
-
-                # 最初に見つかったファイルを使用
-                output_file = os.path.join(self.save_path, downloaded_files[0])
 
                 # 「無変換」オプションが選ばれた場合
                 if self.fmt == "no_conversion":
                     # 無変換のままで保存
                     self.finished.emit(self.save_path)
                     return
+                
+                if not downloaded_files:
+                    self.error.emit(f"ファイルが見つかりません: {title}")
+                    return
+
+                # 最初に見つかったファイルを使用
+                output_file = os.path.join(self.save_path, downloaded_files[0])
 
                 # 動画が webm であれば mp4 に変換する
                 if output_file.endswith(".webm") or output_file.endswith(".flv") or output_file.endswith(".mov"):
