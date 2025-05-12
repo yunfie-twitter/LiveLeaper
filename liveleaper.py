@@ -586,7 +586,7 @@ class App(QWidget):
 
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.Window)
         self.setAttribute(Qt.WA_TranslucentBackground)
-        self.setWindowTitle("DowTube")
+        self.setWindowTitle("LiveLeaper")
         self.current_download_path = None # ダウンロード中のファイルパス
 
         self.show_splash_screen()
