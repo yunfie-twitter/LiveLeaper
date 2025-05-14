@@ -83,20 +83,18 @@ def detect_hw_encoder(ffmpeg_path="./ffmpeg.exe"):
     print("利用可能なH.264ハードウェアエンコーダーが見つかりませんでした。")
     return None, "利用可能なH.264 HWエンコーダーが見つかりません。"
 
-# --- URL正規化関数 ---
+
 def clean_url(url):
-    """入力されたURLをyt-dlpが扱いやすい形式に試みる"""
+    """入力されたURLをyt-dlpが扱いやすい形式に変換"""
     url = url.strip()
-    # googleusercontent.com の特殊形式対応 (例)
+
+    # googleusercontent.com の特殊形式対応
     if "googleusercontent.com/youtube.com/" in url:
-        # より堅牢なID抽出が必要な場合あり
         parts = url.split('/')
         if len(parts) > 2:
-            # ID部分らしきものを取得して通常のYouTube URL形式に変換を試みる
-            video_id = parts[-1].split('?')[0] # ? 以降を除去
-            # IDのプレフィックス (例: '0', '1') を除去する処理が必要なら追加
-            if video_id.startswith(('0', '1')) and len(video_id) > 5: # 仮のID長チェック
-                 video_id = video_id[1:]
+            video_id = parts[-1].split('?')[0]
+            if video_id.startswith(('0', '1')) and len(video_id) > 5:
+                video_id = video_id[1:]
             return f"https://www.youtube.com/watch?v={video_id}"
 
     # shorts URL -> watch URL
@@ -104,16 +102,20 @@ def clean_url(url):
         video_id = url.split("/shorts/")[-1].split("?")[0]
         return f"https://www.youtube.com/watch?v={video_id}"
 
-    # 通常のURLから不要なパラメータを除去 (v= だけ残す)
+    # youtu.be 短縮URL -> watch URL
+    if "youtu.be/" in url:
+        video_id = url.split("youtu.be/")[-1].split("?")[0]
+        return f"https://www.youtube.com/watch?v={video_id}"
+
+    # 通常URLから v= のみ残す
     parsed = urlparse(url)
     query_params = parse_qs(parsed.query)
     vid = query_params.get("v")
     if vid and isinstance(vid, list):
-        # netloc が youtube.com かどうかなどもチェックするとより良い
-        return f"https://{parsed.netloc}/watch?v={vid[0]}"
+        return f"https://www.youtube.com/watch?v={vid[0]}"
 
-    # 上記以外はそのまま返す
     return url
+
 
 # --- 修正済み Downloader クラス ---
 class Downloader(QThread):
