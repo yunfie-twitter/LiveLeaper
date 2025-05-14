@@ -478,7 +478,7 @@ class CustomTitleBar(QWidget):
         self.offset = None
 
         # 指定された QLabel (タイトル部分は空白)
-        self.title_label = QLabel("                                                                                                                                                            ")
+        self.title_label = QLabel("                                                                                                                                                                                                                                                                ")
         self.title_label.setStyleSheet("color: #CCCCCC; font-size: 14px; font-weight: bold; margin-left: 0px;")
 
         layout = QHBoxLayout(self)
@@ -488,10 +488,20 @@ class CustomTitleBar(QWidget):
         layout.addWidget(self.title_label)
         layout.addStretch()
 
-        # 指定された最小化ボタン
+        # 指定された最小化ボタン (ホバー時のスタイルを追加)
         self.min_btn = QPushButton("─")
         self.min_btn.setFixedSize(40, 30)
-        self.min_btn.setStyleSheet("color: #CCCCCC; background-color: #000000; border: none;")
+        self.min_btn.setStyleSheet("""
+            QPushButton {
+                color: #CCCCCC;
+                background-color: #000000;
+                border: none;
+            }
+            QPushButton:hover {
+                background-color: #222222; /* 超薄い白に近いグレー */
+                color: white;
+            }
+        """)
         self.min_btn.clicked.connect(self.parent.showMinimized)
 
         # 指定された閉じるボタン
