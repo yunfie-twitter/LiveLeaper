@@ -115,3 +115,12 @@ GitHub上で Issue や Pull Request を通じてご連絡ください。
 ## 🗓️ 更新履歴
 
 - **2025-05-11:** 初版リリース
+
+    <style>
+    body { font-family: sans-serif; line-height: 1.6; margin: 2em; background: #f8f9fa; }
+    h1, h2 { color: #333; }
+    .container { max-width: 800px; margin: auto; background: #fff; padding: 2em; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    a { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { background: #eee; padding: 2px 4px; border-radius: 4px; }
+  </style>
