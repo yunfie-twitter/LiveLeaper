@@ -69,4 +69,5 @@ git commit -m "Add new feature"
 # プッシュしてPRを作成
 git push origin feature/your-feature
 ```
-[Sponsor this project By Ko-Fi](https://ko-fi.com/liveleaper).
+
+## [Sponsor this project By Ko-Fi](https://ko-fi.com/liveleaper).
