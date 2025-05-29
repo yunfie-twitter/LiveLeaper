@@ -29,7 +29,6 @@ cd LiveLeaper
 
 # Install necessary packages
 pip install -r requirements.txt
-
 ```
 
 ## 🎛 Use the GUI version.
