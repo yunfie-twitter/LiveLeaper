@@ -42,7 +42,7 @@ cd LiveLeaper-GUI
 pip install -r requirements.txt
 python main.py
 ```
-## [Click here to view the Github repository for GUI projects.](https://github.com/yunfie-twitter/LiveLeaper-GUI).
+# [Click here to view the Github repository for GUI projects.](https://github.com/yunfie-twitter/LiveLeaper-GUI)
 
 ## ⚙️ How to use the CLI version
 ```bash
