@@ -1,0 +1,3 @@
+[submodule "LiveLeaper-GUI"]
+	path = LiveLeaper-GUI
+	url = https://github.com/yunfie-twitter/LiveLeaper-GUI.git
