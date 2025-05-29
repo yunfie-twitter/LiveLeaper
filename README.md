@@ -45,7 +45,7 @@ python main.py
 ```
 
 ## ⚙️ How to use the CLI version
-````bash
+```bash
 python main.py [URL1 URL2 ...] [options].
 ```
 
