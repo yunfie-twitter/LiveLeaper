@@ -27,10 +27,6 @@ It supports both a command line (CLI) version and a GUI version included as a su
 git clone --recurse-submodules https://github.com/yunfie-twitter/LiveLeaper.git
 cd LiveLeaper
 
-# Create and activate virtual environment
-python3 -m venv venv
-source venv/bin/activate # On Windows: venv\Scripts\activate
-
 # Install necessary packages
 pip install -r requirements.txt
 
