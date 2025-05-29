@@ -12,14 +12,13 @@ It supports both a command line (CLI) version and a GUI version included as a su
 - ⚡ **Fast and stable** - parses streaming URLs directly instead of official API
 - 🪟 **Multi-OS support** - runs on Windows / macOS / Linux.
 
---- **Fast and stable** - parses streaming URLs directly instead of through official APIs
+**Fast and stable** - parses streaming URLs directly instead of through official APIs
 
 ## 🖥️ System Requirements
 
 - Python 3.8 or higher
 - OS: Windows 10+ / macOS 10.14+ / Debian Linux (Ubuntu, etc.)
 
---- ##
 
 ## 📦 Installation instructions
 
