@@ -1,73 +1,74 @@
 # LiveLeaper
 
-**LiveLeaper** は、YouTube 動画を簡単にダウンロードできる Python 製ツールです。  
-コマンドライン（CLI）版と、サブモジュールとして含まれる GUI 版の両方をサポートしています。
+**LiveLeaper** is a Python tool for easily downloading YouTube videos.  
+It supports both a command line (CLI) version and a GUI version included as a sub-module.
 
 ---
 
-## ✅ 特徴
+## ✅ Features
 
-- 🎬 **YouTube対応** - 高品質動画のダウンロードに対応（`yt-dlp`を使用）
-- 🖥️ **CLI & GUI両対応** - ターミナルが苦手な人でも使える
-- ⚡ **高速かつ安定** - 公式APIではなく直接ストリーミングURLを解析
-- 🪟 **マルチOS対応** - Windows / macOS / Linux 上で動作
+- 🎬 **YouTube support** - supports downloading high quality videos (using `yt-dlp`)
+- 🖥️ **CLI & GUI both support** - can be used even by people who are not good with terminal
+- ⚡ **Fast and stable** - parses streaming URLs directly instead of official API
+- 🪟 **Multi-OS support** - runs on Windows / macOS / Linux.
 
----
+--- **Fast and stable** - parses streaming URLs directly instead of through official APIs
 
-## 🖥️ 動作環境
+## 🖥️ System Requirements
 
-- Python 3.8 以上
-- OS: Windows 10+ / macOS 10.14+ / Debian系 Linux (Ubuntuなど)
+- Python 3.8 or higher
+- OS: Windows 10+ / macOS 10.14+ / Debian Linux (Ubuntu, etc.)
 
----
+--- ##
 
-## 📦 インストール手順
+## 📦 Installation instructions
 
 ```bash
-# リポジトリをクローン（サブモジュールも含めて）
+# Clone the repository (including submodules)
 git clone --recurse-submodules https://github.com/yunfie-twitter/LiveLeaper.git
 cd LiveLeaper
 
-# 仮想環境を作成して有効化
+# Create and activate virtual environment
 python3 -m venv venv
-source venv/bin/activate  # Windows の場合: venv\Scripts\activate
+source venv/bin/activate # On Windows: venv\Scripts\activate
 
-# 必要なパッケージをインストール
+# Install necessary packages
 pip install -r requirements.txt
 
 ```
 
-## 🎛 GUI版を使用する
+## 🎛 Use the GUI version.
 ```bash
 cd LiveLeaper-GUI
 pip install -r requirements.txt
 python main.py
 ```
 
-## ⚙️ CLI版の使い方
-```bash
-python main.py [URL1 URL2 ...] [オプション]
+## ⚙️ How to use the CLI version
+````bash
+python main.py [URL1 URL2 ...] [options].
 ```
 
-使用可能なオプション
-オプション	説明
---audio	音声のみを抽出して保存（デフォルト設定ファイルに準拠）
---ext	出力ファイルの拡張子を指定（例：mp4, webm, mp3）
---output	保存先ディレクトリ（例：downloads）
---lang	言語ファイルを指定（例：en, ja）
---info	ダウンロードせず、動画情報のみを取得
+Available options
+Option Description
+--audio Extract and save audio only (according to default configuration file)
+--ext Specify output file extension (e.g. mp4, webm, mp3)
+--output Specify destination directory (e.g., downloads)
+--lang Specify language file (e.g. en, ja)
+--info Get only video information without downloading
 
-## 🤝 貢献方法
-Pull Request や Issue は大歓迎です！
+## 🤝 How to contribute
+Pull Requests and Issues are welcome!
 ```bash
-# ブランチ作成
+# Create a branch
 git checkout -b feature/your-feature
 
-# コード編集・コミット
-git commit -m "Add new feature"
+# Edit code and commit
+git commit -m “Add new feature”
 
-# プッシュしてPRを作成
+# Push to create a PR
 git push origin feature/your-feature
 ```
 
 ## [Sponsor this project By Ko-Fi](https://ko-fi.com/liveleaper).
+
