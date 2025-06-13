@@ -40,7 +40,7 @@ Python 3.8以上が必要です。依存ライブラリは`requirements.txt`に�
 
 ## ライセンス
 
-MIT License
+Creative Commons Zero v1.0 Universal
 
 ---
 
