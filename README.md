@@ -1,69 +1,49 @@
-# LiveLeaper
+# LiveLeaper - 動画・音声ダウンロード変換ツール
 
-**LiveLeaper** is a Python tool for easily downloading YouTube videos.  
-It supports both a command line (CLI) version and a GUI version included as a sub-module.
+YouTubeやニコニコ動画などから動画や音声を簡単にダウンロード・変換できるPython製のGUIツールです。
 
 ---
 
-## ✅ Features
+## 特長
 
-- 🎬 **YouTube support** - supports downloading high quality videos (using `yt-dlp`)
-- 🖥️ **CLI & GUI both support** - can be used even by people who are not good with terminal
-- ⚡ **Fast and stable** - parses streaming URLs directly instead of official API
-- 🪟 **Multi-OS support** - runs on Windows / macOS / Linux.
+- **YouTube、ニコニコ動画対応のURL自動修正機能**
+- **動画・音声のダウンロードと変換**（MP4, MP3, AACなど対応）
+- **PyQt5ベースの使いやすいGUI**
+- **バッチ処理と並列ダウンロード対応**
+- **ハードウェアエンコード対応**（NVIDIA NVENC、Intel QSVなど）
+- **初期設定ウィザードで簡単セットアップ**
+- **詳細なログと進捗表示**
+- **クロスプラットフォーム対応**（Windows, Linux, macOS）
 
-**Fast and stable** - parses streaming URLs directly instead of through official APIs
+---
 
-## 🖥️ System Requirements
+## インストール
 
-- Python 3.8 or higher
-- OS: Windows 10+ / macOS 10.14+ / Debian Linux (Ubuntu, etc.)
+Python 3.8以上が必要です。依存ライブラリは`requirements.txt`に記載されています。
+---
 
+## 使い方
 
-## 📦 Installation instructions
+### GUIモードで起動
 
-```bash
-# Clone the repository (including submodules)
-git clone --recurse-submodules https://github.com/yunfie-twitter/LiveLeaper.git
-cd LiveLeaper
+python main.py gui 
 
-# Install necessary packages
-pip install -r requirements.txt
-```
+### コマンドラインから直接ダウンロードや変換も可能
 
-## 🎛 Use the GUI version.
-```bash
-cd LiveLeaper-GUI
-pip install -r requirements.txt
-python main.py
-```
- [Click here to view the Github repository for GUI projects.](https://github.com/yunfie-twitter/LiveLeaper-GUI)
+python main.py download "https://www.youtube.com/watch?v=xxxx"
+python main.py convert input.mp4 output.mp3
 
-## ⚙️ How to use the CLI version
-```bash
-python main.py [URL1 URL2 ...] [options].
-```
+---
 
-Available options
-Option Description
---audio Extract and save audio only (according to default configuration file)
---ext Specify output file extension (e.g. mp4, webm, mp3)
---output Specify destination directory (e.g., downloads)
---lang Specify language file (e.g. en, ja)
---info Get only video information without downloading
+## ライセンス
 
-## 🤝 How to contribute
-Pull Requests and Issues are welcome!
-```bash
-# Create a branch
-git checkout -b feature/your-feature
+MIT License
 
-# Edit code and commit
-git commit -m “Add new feature”
+---
 
-# Push to create a PR
-git push origin feature/your-feature
-```
+## 開発・連絡先
 
-## [Sponsor this project By Ko-Fi](https://ko-fi.com/liveleaper).
+開発者: [yunfie_twitter](https://twitter.com/yunfie_twitter)  
+GitHub: [https://github.com/yunfie-twitter/LiveLeaper](https://github.com/yunfie-twitter/LiveLeaper)
 
+---
