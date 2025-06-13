@@ -1,7 +1,0 @@
-# Configuration Template
-audio = false
-ext = mp4
-output = downloads
-lang = en
-threads = 1
-filename_format = %(title)s.%(ext)s
