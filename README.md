@@ -26,13 +26,13 @@ Python 3.8以上が必要です。依存ライブラリは`requirements.txt`に�
 
 ### GUIモードで起動
 
-python main.py gui 
+> python main.py gui 
 
 
 ### コマンドラインから直接ダウンロードや変換も可能
 
-python main.py download "https://www.youtube.com/watch?v=xxxx"
-python main.py convert input.mp4 output.mp3
+> python main.py download "https://www.youtube.com/watch?v=xxxx"
+> python main.py convert input.mp4 output.mp3
 
 ---
 
