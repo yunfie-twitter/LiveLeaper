@@ -28,6 +28,7 @@ Python 3.8以上が必要です。依存ライブラリは`requirements.txt`に�
 
 python main.py gui 
 
+
 ### コマンドラインから直接ダウンロードや変換も可能
 
 python main.py download "https://www.youtube.com/watch?v=xxxx"
