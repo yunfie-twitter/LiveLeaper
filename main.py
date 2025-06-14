@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""
-メイン制御モジュール
-各モードの起動制御（CLI/API/GUI/バッチ）
-初回起動時の設定ウィザード対応
-"""
+
 import sys
 import argparse
 import logging
