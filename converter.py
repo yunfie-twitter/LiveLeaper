@@ -1,6 +1,6 @@
 """
 変換処理モジュール
-ffmpegを使用した動画・音声の形式変換機能（修正版）
+ffmpegを使用した動画・音声の形式変換機能
 """
 import ffmpeg
 import logging
